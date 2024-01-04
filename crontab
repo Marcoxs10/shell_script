@@ -1,0 +1,1 @@
+*/30 * * * * /var/www/html/projetos_hospedados >> /var/www/html/log.txt
