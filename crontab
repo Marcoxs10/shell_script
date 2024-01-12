@@ -1,1 +1,1 @@
-*/30 * * * * /var/www/html/projetos_hospedados >> /var/www/html/log.txt
+*/30 * * * * /var/www/html/script_shell.sh >> /var/www/html/log.txt
