@@ -1,7 +1,16 @@
 #!/bin/bash
 
-caminho_completo="/var/www/html/projetos_hospedados"
+diretorio_projetos="/var/www/html/"
 
-cd "$caminho_completo"
+cd $diretorio_projetos
 
-git pull origin main
+for projeto in *; do
+    if [ -d "$projeto" ]; then
+        echo "Atualizando $projeto..."
+        cd "$projeto" && git pull origin main
+        cd ..
+        echo "-----------------------------"
+    fi
+done
+
+echo "Atualização concluída para todos os projetos."
